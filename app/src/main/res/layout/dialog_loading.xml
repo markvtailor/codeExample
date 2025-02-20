@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:backgroundTint="@color/gray_dialog_background"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="0dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="36dp">
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateTint="@color/green" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="8dp"
+            android:lines="2"
+            android:text="@string/loading_dialog_message"
+            android:textColor="@color/light_text"
+            android:textSize="@dimen/dialog_loading_text_size" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2"
+    android:orientation="vertical"
+    tools:context="com.wallpaperscraft.keby.app.ui.settings.SettingsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:navigationIcon="@drawable/app_logo"
+            app:title="@string/navigation_label_settings"
+            app:titleTextAppearance="@style/ScreenTitleStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_text_input"
+        app:settings_title="@string/settings_label_text_input"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_keyboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_keyboard_layout"
+        app:settings_title="@string/settings_label_keyboard_layout"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_language"
+        app:settings_title="@string/settings_label_language"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_sound_vibration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_sound"
+        app:settings_title="@string/settings_label_sound_vibration"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_info"
+        app:settings_title="@string/settings_label_information"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+    <com.wallpaperscraft.keby.app.ui.views.SettingsItemView
+        android:id="@+id/settings_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_tint="@color/light_text"
+        app:settings_icon="@drawable/ic_settings_support"
+        app:settings_title="@string/settings_label_support"
+        app:text_color="@color/white"
+        app:text_size="@dimen/label_text_size" />
+
+</LinearLayout>

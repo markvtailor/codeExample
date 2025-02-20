@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_back"
+                app:navigationIconTint="@color/green"
+                app:title="@string/settings_label_language"
+                app:titleTextAppearance="@style/ScreenTitleStyle" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/downloaded_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/golos_text_medium"
+            android:paddingVertical="16dp"
+            android:text="@string/label_your_languages"
+            android:textColor="@color/light_text_opaq"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/top_app_bar"
+            app:textAllCaps="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/language_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/downloaded_label" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/download_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/golos_text_medium"
+            android:paddingVertical="16dp"
+            android:text="@string/label_other_languages"
+            android:textColor="@color/light_text_opaq"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/language_list"
+            app:textAllCaps="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/download_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/download_label" />
+
+        <LinearLayout
+            android:id="@+id/error_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6000000"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/language_list">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:rotation="180"
+                android:src="@drawable/ic_attention"
+                app:tint="@color/orange_error" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:text="@string/message_language_settings"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/cancel_message_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_close"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

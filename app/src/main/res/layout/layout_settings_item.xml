@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="32dp"
+            android:scaleX="1.05"
+            android:scaleY="1.05"
+            android:src="@drawable/ic_nav_bar_favorites" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/settings_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="Раскладка и клавиши"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/button_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="18dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_forward" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Keyboard">
+        <attr name="keyWidth" format="dimension|fraction" />
+        <attr name="keyHeightPortrait" format="dimension|fraction" />
+        <attr name="keyHeightLandscape" format="dimension|fraction" />
+        <attr name="keyHorizontalGap" format="dimension|fraction" />
+        <attr name="keyVerticalGap" format="dimension|fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="Row">
+        <attr name="rowEdgeFlags">
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="keyboardMode" format="reference" />
+        <attr name="borderToBorder" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Key">
+        <attr name="codes" format="integer|string" />
+        <attr name="popupCharacters" format="string" />
+        <attr name="alternativePopupCharacters" format="string" />
+        <attr name="alternativeVariantEnabled" format="boolean" />
+        <attr name="isModifier" format="boolean" />
+        <attr name="isPreviewEnabled" format="boolean" />
+        <attr name="isRepeatable" format="boolean" />
+        <attr name="iconPreview" format="reference" />
+        <attr name="keyOutputText" format="string" />
+        <attr name="keyLabel" format="string" />
+        <attr name="alternativeKeyLabel" format="string" />
+        <attr name="keySecondaryLabel" format="string" />
+        <attr name="alternativeKeySecondaryLabel" format="string" />
+        <attr name="keySecondaryLabelCode" format="string" />
+        <attr name="iconsHorizontalMargin" format="dimension" />
+        <attr name="centerIcon" format="reference" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="centerIconTapped" format="reference" />
+        <attr name="leftIconTapped" format="reference" />
+        <attr name="rightIconTapped" format="reference" />
+        <attr name="centerIconLocked" format="reference" />
+        <attr name="leftIconLocked" format="reference" />
+        <attr name="rightIconLocked" format="reference" />
+        <attr name="group" format="enum">
+            <enum name="COMMON" value="0" />
+            <enum name="COMMON_SECOND" value="1" />
+            <enum name="CHANGE_MODE" value="2" />
+            <enum name="SHIFT_DELETE" value="3" />
+            <enum name="ENTER" value="4" />
+            <enum name="SPACE" value="5" />
+            <enum name="PHONE" value="6" />
+            <enum name="PHONE_ADDITIONAL" value="7" />
+            <enum name="PHONE_ENTER" value="8" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ErrorView">
+        <attr name="ev_icon" format="enum">
+            <enum name="standard" value="0"/>
+            <enum name="none" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SettingsItemView">
+        <attr name="settings_icon" format="reference"/>
+        <attr name="settings_title" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+        <attr name="icon_tint" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingsSwitchExtendedView">
+        <attr name="settings_label" format="string"/>
+        <attr name="settings_description" format="string"/>
+        <attr name="label_text_size" format="dimension"/>
+        <attr name="description_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="NavBarItemView">
+        <attr name="nav_icon" format="reference"/>
+        <attr name="nav_label" format="string"/>
+        <attr name="nav_icon_size" format="dimension"/>
+        <attr name="nav_icon_color" format="color"/>
+        <attr name="nav_item_background_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingsLanguageView">
+        <attr name="language_label" format="string"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/green"
+            app:title="@string/settings_label_sound_vibration"
+            app:titleTextAppearance="@style/ScreenTitleStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_app_bar">
+
+        <com.wallpaperscraft.keby.app.ui.views.SettingsSwitchExtendedView
+            android:id="@+id/settings_click_sound"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:settings_label="@string/settings_click_sound_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                android:src="@drawable/ic_sound" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/gradient" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sound_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="100"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/green"
+                    app:trackColorActive="@color/green"
+                    app:trackColorInactive="@android:color/transparent"
+                    app:trackStopIndicatorSize="0dp"
+                    app:thumbHeight="9dp"
+                    app:thumbRadius="12dp"
+                    app:thumbTrackGapSize="0dp"
+                    app:thumbWidth="9dp"
+                    app:trackHeight="3dp"
+                    app:trackInsideCornerSize="0dp" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <com.wallpaperscraft.keby.app.ui.views.SettingsSwitchExtendedView
+            android:id="@+id/settings_click_vibration"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:settings_label="@string/settings_click_vibration_label" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                android:src="@drawable/ic_vibration" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/gradient" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/vibration_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="100"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/green"
+                    app:trackColorActive="@color/green"
+                    app:trackColorInactive="@android:color/transparent"
+                    app:trackStopIndicatorSize="0dp"
+                    app:thumbHeight="9dp"
+                    app:thumbRadius="12dp"
+                    app:thumbTrackGapSize="0dp"
+                    app:thumbWidth="9dp"
+                    app:trackHeight="3dp"
+                    app:trackInsideCornerSize="0dp" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

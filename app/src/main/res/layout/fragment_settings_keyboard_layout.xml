@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/green"
+            app:title="@string/settings_label_keyboard_layout"
+            app:titleTextAppearance="@style/ScreenTitleStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_app_bar">
+
+        <com.wallpaperscraft.keby.app.ui.views.SettingsSwitchExtendedView
+            android:id="@+id/settings_digits_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:settings_description="@string/settings_digits_row_description"
+            app:settings_label="@string/settings_digits_row_label" />
+
+        <com.wallpaperscraft.keby.app.ui.views.SettingsSwitchExtendedView
+            android:id="@+id/settings_suggestions_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:settings_description="@string/settings_suggestions_row_description"
+            app:settings_label="@string/settings_suggestions_row_label" />
+
+        <com.wallpaperscraft.keby.app.ui.views.SettingsSwitchExtendedView
+            android:id="@+id/settings_alternate_symbols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:settings_description="@string/settings_alternate_symbols_description"
+            app:settings_label="@string/settings_alternate_symbols_label" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/green"
+        android:contentDescription="@string/fab_keyboard_description"
+        android:src="@drawable/ic_keyboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
